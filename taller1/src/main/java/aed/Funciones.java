@@ -73,9 +73,8 @@ class Funciones {
 
         if(n==0 || n==1) {return false;}
 
-        boolean res = true;
-
         
+        boolean res = true;
 
         for(int i = 2; i < n; i++) {
             if (divideA(i, n)) {
@@ -168,7 +167,7 @@ class Funciones {
         return res;
     }
 
-    boolean esSufijo2(String s1, String s2) {    //s1 tiene q ser test y s2 SUPER_TEST_
+    boolean esSufijo2(String s1, String s2) {    //s1 tiene q ser test y s2 SUPER_TEST_    NO SE ME OCURRIO COMO USAR ESPREFIJO SIN MANIUPLAR STRINGS
         // COMPLETAR
         boolean res = false;
         res =esPrefijo(darVuelta(s1), darVuelta(s2));
