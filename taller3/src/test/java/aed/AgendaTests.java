@@ -122,7 +122,7 @@ public class AgendaTests {
         assertEquals(mensaje, recordatorio.mensaje());
 
         // Evitar aliasing.
-        f.incrementarDia();
+        f.incrementarDia();     // este f tal vez esta aliasiado por la forma q creo fecha en recordatorio...
         Fecha f2 = recordatorio.fecha();
         f2.incrementarDia();
         assertEquals(new Fecha(10, 6), recordatorio.fecha());

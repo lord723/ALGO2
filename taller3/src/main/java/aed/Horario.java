@@ -42,8 +42,8 @@ public class Horario {
 
         Horario hOtro = (Horario) otro;
 
-        boolean horaIg= hOtro.hora() == this.hora()
-        boolean minutoIg= hOtro.minutos() == this.minutos()
+        boolean horaIg= hOtro.hora() == this.hora();
+        boolean minutoIg= hOtro.minutos() == this.minutos();
 
         return horaIg && minutoIg;
     
