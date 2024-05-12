@@ -11,16 +11,21 @@ class CoberturaTests {
 
     @Test
     void testFizzBuzz() {
-        assertEquals("A","B");
+        assertEquals("Fizz",cobertura.fizzBuzz(3));
+        assertEquals("Buzz",cobertura.fizzBuzz(10));
+        assertEquals("FizzBuzz",cobertura.fizzBuzz(15));
+        assertEquals("49",cobertura.fizzBuzz(49));
+        assertEquals("Fizz",cobertura.fizzBuzz(9));
     }
 
     @Test
     void testNumeroCombinatorio() {
-        assertTrue(false);
+        assertEquals(1,cobertura.numeroCombinatorio(0,0));
     }
 
     @Test
     void testRepeticionesConsecutivas() {
-        assertTrue(false);
+        assertEquals(3,cobertura.repeticionesConsecutivas(new int[]{1,1,1,3,4,1,1,5,8}));
+        assertEquals(3,cobertura.repeticionesConsecutivas(new int[]{0,3,4,1,1,1,5,8}));
     }
 }
