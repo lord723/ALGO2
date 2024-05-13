@@ -9,7 +9,12 @@ class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios 
     }
 
     public ArregloRedimensionableDeRecordatorios(ArregloRedimensionableDeRecordatorios vector) {
-        throw new UnsupportedOperationException("No implementada aun");
+        _recordatorios = new Recordatorio[2];
+        
+        for (int i=0; i<vector.longitud();i++){
+            this.agregarAtras(obtener(i));
+
+        }
     }
 
     public int longitud() {
@@ -51,16 +56,25 @@ class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios 
     }
 
     public void quitarAtras() {
-        throw new UnsupportedOperationException("No implementada aun");
+        _recordatorios[this.longitud()-1]=null;
     }
 
     public void modificarPosicion(int indice, Recordatorio valor) {
-        throw new UnsupportedOperationException("No implementada aun");
+        while (_recordatorios.length<indice){
+            duplicarTamaño(_recordatorios);
+        }
+        _recordatorios[indice]=valor;
 
     }
 
     public ArregloRedimensionableDeRecordatorios copiar() {
-        throw new UnsupportedOperationException("No implementada aun");
+        ArregloRedimensionableDeRecordatorios res=new ArregloRedimensionableDeRecordatorios();
+
+        for (int i = 0; i<_recordatorios.length; i++){
+            agregarAtras(_recordatorios[i]);
+
+        }
+        return res;
     }
 
 }
