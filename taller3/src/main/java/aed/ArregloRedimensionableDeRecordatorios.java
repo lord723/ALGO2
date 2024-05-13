@@ -46,7 +46,8 @@ class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios 
     }
 
     public Recordatorio obtener(int i) {
-        return _recordatorios[i];
+        Recordatorio res=_recordatorios[i];
+        return res;
     }
 
     public void quitarAtras() {

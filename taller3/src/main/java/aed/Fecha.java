@@ -26,9 +26,9 @@ public class Fecha {
     public String toString() {
         StringBuffer sbuffer = new StringBuffer();
 
-        sbuffer.append(dia().toString());
+        sbuffer.append(dia());
         sbuffer.append("/");
-        sbuffer.append(mes().toString());
+        sbuffer.append(mes());
 
         return sbuffer.toString();
 
