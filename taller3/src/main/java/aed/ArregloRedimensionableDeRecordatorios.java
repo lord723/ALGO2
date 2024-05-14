@@ -5,14 +5,14 @@ class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios 
     private Recordatorio[] _recordatorios;
 
     public ArregloRedimensionableDeRecordatorios() {
-        _recordatorios = new Recordatorio[2];       //TIENE ARRAY[0] Y ARRAY[1]
+        _recordatorios = new Recordatorio[5];       //TIENE ARRAY[0] Y ARRAY[1]
     }
 
     public ArregloRedimensionableDeRecordatorios(ArregloRedimensionableDeRecordatorios vector) {
-        _recordatorios = new Recordatorio[2];
+        _recordatorios = new Recordatorio[5];
         
         for (int i=0; i<vector.longitud();i++){
-            this.agregarAtras(obtener(i));
+            this.agregarAtras(vector.obtener(i));
 
         }
     }
@@ -71,7 +71,7 @@ class ArregloRedimensionableDeRecordatorios implements SecuenciaDeRecordatorios 
         ArregloRedimensionableDeRecordatorios res=new ArregloRedimensionableDeRecordatorios();
 
         for (int i = 0; i<_recordatorios.length; i++){
-            agregarAtras(_recordatorios[i]);
+            res.agregarAtras(_recordatorios[i]);
 
         }
         return res;

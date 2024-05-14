@@ -53,11 +53,11 @@ public class Recordatorio {
 
         Recordatorio rOtro = (Recordatorio) otro;
 
-        boolean mismoMensaje= rOtro.mensaje()==this.mensaje();
+        boolean mismoMensaje= rOtro.mensaje().equals(this.mensaje());
 
-        boolean mismoFecha= rOtro.fecha()==this.fecha();
+        boolean mismoFecha= rOtro.fecha().equals(this.fecha());
 
-        boolean mismoHora= rOtro.horario()==this.horario();
+        boolean mismoHora= rOtro.horario().equals(this.horario());
 
         return mismoMensaje && mismoFecha && mismoHora;
 
